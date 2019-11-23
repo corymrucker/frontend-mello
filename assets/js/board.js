@@ -1,7 +1,7 @@
 class Card {
-  constructor(text) {
+  constructor(text){
     this.text = text;
-    this.id = ++Card.lastId;
+    this.id = ++Card.lastId
   }
 }
 
@@ -19,7 +19,7 @@ class List {
     this.cards.push(card);
   }
 
-   findCard(cardId) {
+  findCard(cardId) {
     return this.cards.find(function(card) {
       if (cardId === card.id) {
         return card;
@@ -41,7 +41,7 @@ class Board {
     this.lists.push(list);
   }
 
-  findList(listId) {
+  findList(listId){
     return this.lists.find(function(list) {
       return listId === list.id;
     });
@@ -49,7 +49,7 @@ class Board {
 
   editList(listId, newTitle) {
     var list = this.findList(listId);
-    if (list) {
+    if (list){
       list.title = newTitle;
     }
   }
